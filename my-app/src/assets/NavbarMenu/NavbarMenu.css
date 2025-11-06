@@ -1,0 +1,104 @@
+/* 🔥 Background cinematic motion */
+.navbar-container {
+  position: relative;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: radial-gradient(rgba(20, 0, 0, 0.8), rgba(0, 0, 0, 0.95)),
+    url("https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1470&q=80")
+      center/cover no-repeat;
+  animation: moveBg 40s ease-in-out infinite alternate;
+  box-shadow: 0 2px 15px rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+/* Background motion effect */
+@keyframes moveBg {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center center;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+/* 🎬 Logo Text */
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.4);
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.logo-text:hover {
+  transform: scale(1.1);
+  color: #ff4d4d;
+}
+
+/* ☰ Toggle Button */
+.menu-toggle {
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 20;
+}
+
+.menu-toggle:hover {
+  color: #ff4444;
+  transform: rotate(90deg);
+}
+
+/* 🔗 Nav Links */
+.nav-links {
+  display: none;
+  transition: all 0.4s ease;
+}
+
+.nav-links.show {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: rgba(10, 0, 0, 0.9);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff3333;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
